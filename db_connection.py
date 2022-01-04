@@ -5,6 +5,6 @@ def get_connection():
     conn = psycopg2.connect(
         host="ok-db-1.cmqzhxowhqdn.ap-southeast-1.rds.amazonaws.com",
         database="datacrawl",
-        user="postgres",
+        user="app_user",
         password=">QyNVw6&")
     return conn
