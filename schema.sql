@@ -70,3 +70,20 @@ create table if not exists data.iherb_model (
   on delete cascade
 );
 grant insert, update, delete, select on data.iherb_model to data_app_role;
+
+-- LookFantastic.sg data
+create table if not exists data.look_fantastic_product (
+  product_id numeric(19,0) primary key,
+  product_category character varying (100) not null,
+  product_link character varying (1000) not null,
+  product_image character varying (300) not null,
+  product_name character varying (500) default 'NA' not null,
+  product_overview character varying (10000),
+  product_direction character varying (10000),
+  reviews numeric(7,0) default 0 not null,
+  ratings numeric(6,2) default 0 not null,
+  product_rrp money not null,
+  product_sell_price money not null,
+  last_update timestamp default current_timestamp not null
+);
+grant insert, update, delete, select on data.look_fantastic_product to data_app_role;
