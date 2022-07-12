@@ -6,5 +6,5 @@ def get_connection():
         host="ok-db-1.cmqzhxowhqdn.ap-southeast-1.rds.amazonaws.com",
         database="datacrawl",
         user="app_user",
-        password=">QyNVw6&")
+        password="")
     return conn
